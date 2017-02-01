@@ -26,7 +26,7 @@ COPY rootfs/ /
 ENTRYPOINT ["/app-entrypoint.sh"]
 CMD ["nami", "start", "--foreground", "mongodb"]
 
-RUN chown -R ${RUN_USER}:${RUN_GROUP} /var/lib/mongodb /var/log/mongodb /bitnami/$BITNAMI_APP_NAME
+RUN chown -R ${RUN_USER}:${RUN_GROUP} /var/lib/mongodb /var/log/mongodb
 
 VOLUME ["/bitnami/$BITNAMI_APP_NAME"]
 
